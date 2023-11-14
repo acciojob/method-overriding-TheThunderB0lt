@@ -19,14 +19,14 @@ public class Main {
     }
 }
 
-class A {
+public static class A {
     public String meth() {
         return "invoking method from class A";
     }
 
 }
 
-class B extends A {
+public static class B extends A {
 
     @Override 
     public String meth() {
