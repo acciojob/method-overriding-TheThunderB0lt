@@ -11,25 +11,25 @@ Task 5: call this overridden method from obj of class B
 package com.driver;
 
 public class Main {
+
+    public static class A {
+        public String meth() {
+            return "invoking method from class A";
+        }
+    
+    }
+    
+    public static class B extends A {
+    
+        @Override 
+        public String meth() {
+            return "overridden method from obj class B";
+        }
+    }
+
     public static void main(String[] args) {
         B obj = new B();
         System.out.println(obj.meth());
-
-        System.out.println(obj.meth());
     }
-}
-
-public static class A {
-    public String meth() {
-        return "invoking method from class A";
-    }
-
-}
-
-public static class B extends A {
-
-    @Override 
-    public String meth() {
-        return "overridden method from obj class B";
-    }
+    
 }
